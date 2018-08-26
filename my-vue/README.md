@@ -1,6 +1,6 @@
 # my-vue
 
-> d
+> vue模板
 
 ## Build Setup
 
