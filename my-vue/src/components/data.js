@@ -1,0 +1,6 @@
+
+data:['heee'];
+
+export {
+    data
+}
