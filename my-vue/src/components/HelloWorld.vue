@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
+     <video src="https://rst-prd-oss.oss-cn-shenzhen.aliyuncs.com/rst-business/vedio/bv1.mp4"></video>
+
   </div>
 </template>
 
@@ -13,8 +15,11 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'memda'
+      msg: 'test'
     }
+  },
+  methods:{
+    
   }
 }
 </script>
