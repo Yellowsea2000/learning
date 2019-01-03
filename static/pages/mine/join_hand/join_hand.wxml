@@ -1,0 +1,41 @@
+<!--pages/mine/join_hand/join_hand.wxml-->
+
+<view class='wrap'>
+  <view class='idcard-box'>
+    <view class='idcard-front idcard-item' bindtap="cameraMethods" data-idcard='front'>
+      <view wx:if="{{!isFrontUrl&&!persInfo.idCard0Url}}" class='idcard-upload'>
+        <view class='idcard-upload-text'>
+          <image class='camera' mode='widthFix' src='/images/ic_mine_camera.png'></image>
+          <text style='margin-left:10rpx;'>上传身份证正面</text>
+        </view>
+        <image class='idcard-bg' mode='widthFix' src='/images/ic_mine_camera_bg_red.png'></image>
+      </view>
+      <view wx:if="{{isFrontUrl||persInfo.idCard0Url}}" class='idcard-img'>
+        <image src="{{frontUrl?frontUrl:persInfo.idCard0Url}}" mode='widthFix' class='idcard-img'></image>
+      </view>
+
+    </view>
+    <view class='idcard-back idcard-item' bindtap="cameraMethods" data-idcard='back'>
+      <view wx:if="{{!isBackUrl&&!persInfo.idCard1Url}}" class='idcard-upload'>
+        <view class='idcard-upload-text'>
+          <image class='camera' mode='widthFix' src='/images/ic_mine_camera.png'></image>
+          <text style='margin-left:10rpx;'>上传身份证反面</text>
+        </view>
+        <image class='idcard-bg' mode='widthFix' src='/images/ic_mine_camera_bg_red.png'></image>
+      </view>
+      <view wx:if="{{isBackUrl||persInfo.idCard1Url}}" class='idcard-img'>
+        <image src="{{backUrl?backUrl:persInfo.idCard1Url}}" mode='widthFix' class='idcard-img'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='form-box'>
+    <block wx:for='{{inputSetting}}' wx:key='index'>
+      <input_picker bind:onChange="{{item.selfType == 'input'? 'onChange':''}}" bind:bindPickerChange="{{item.selfType == 'picker' ? 'bindPickerChange' :''}}" objSet="{{item}}" data-name='{{item.name}}' value="{{persInfo[item.name]}}"></input_picker>
+    </block>
+  </view>
+  <view class='btn-box'>
+    <button class='bottom-btn' disabled='{{false}}' bindtap='next'>下一步</button>
+  </view>
+</view>
+<view class='loading' wx:if="{{isLoading}}"></view>

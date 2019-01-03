@@ -1,0 +1,46 @@
+
+
+.back-pre {
+  width: 32rpx;
+  height: 36rpx;
+  margin-top: 4rpx;
+  padding: 20rpx 30rpx;
+  padding-right: 100rpx;
+}
+
+.m-header {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.m-header .m-header-content {
+  position: relative;
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+
+.m-header .m-header-content .btn-back {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  background-color: none;
+  height: 100rpx;
+  width: 120rpx;
+}
+
+.m-header .img-back {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 36rpx;
+}
+.m-header .title{
+  width: 100%;
+  text-align: center;
+  padding-right: 30rpx;
+}

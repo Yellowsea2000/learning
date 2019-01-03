@@ -1,0 +1,114 @@
+/* pages/index/jobDetail/jobDetail.wxss */
+
+.slide-image {
+  width: 100vw;
+  height: 100%;
+}
+
+.price {
+  color: #ff7e00;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.mt {
+  margin-top: 14rpx;
+}
+
+.content.content2 {
+  margin-top: 12rpx;
+}
+
+.content.content2 .content-title {
+  padding-bottom: 8rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.content {
+  font-size: 28rpx;
+  background-color: white;
+  padding: 40rpx 46rpx;
+  color: #999;
+}
+
+.content .content-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .content-item .content-right {
+  display: flex;
+  margin-left: 20rpx;
+  min-width: 240rpx;
+  justify-content: flex-end;
+}
+
+.content .left {
+  width: 140rpx;
+  min-width: 140rpx;
+}
+
+.address {
+  display: flex;
+}
+
+.address image {
+  width: 20rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+  margin-top: 4rpx;
+}
+
+.content2 .item {
+  display: flex;
+  line-height: 44rpx;
+}
+.sb{
+  flex-wrap: wrap;
+}
+.sb-right{
+  max-width: 75%;
+}
+.btn-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  display: flex;
+  text-align: center;
+}
+
+.btn-box view {
+  width: 50%;
+}
+.btn-box .left{
+  background-color:#fff;
+  color: #FF6C00;
+}
+.btn-box .right{
+   background: linear-gradient(to top right, #CA154C 0%, #DB3838 100%);
+  color: #fff;
+}
+.btn-box .left-hover{
+  background-color: #efeff4;
+}
+.btn-box .right-hover{
+  background: rgb(245, 120, 103);
+}
+
+
+.back-top{
+  position:fixed;
+  bottom:150rpx;
+  left:0;
+  border-radius:0 50rpx 50rpx 0;
+  width:100rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  color:white;
+  font-size:30rpx;
+  text-align: center;
+  background:#F60554;
+}

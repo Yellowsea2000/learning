@@ -1,0 +1,108 @@
+/* pages/history/history.wxss */
+
+.mt {
+  margin-top: 20rpx;
+}
+
+.his-item {
+  background-color: white;
+  padding:10rpx 50rpx 40rpx 50rpx;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.his-item .top {
+  border-bottom: 2rpx solid #ddd;
+  padding-bottom: 26rpx;
+}
+
+.his-item .top .top-item {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.his-item .top .left {
+  width: 45%;
+  max-width: 45%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.his-item .top .right {
+  display: flex;
+  width: 50%;
+  text-align: right;
+  position: relative;
+}
+
+.his-item .top .right view:last-child {
+  width: 60%;
+  max-width: 60%;
+  text-align: left;
+  margin-left: 24rpx;
+}
+
+.his-item .top .right view:first-child {
+  width: 40%;
+}
+
+.his-item .top .right .salary {
+  width: 100%;
+  color: #ff7e00;
+  font-size: 36rpx;
+  white-space: nowrap;
+}
+
+.his-item .top .top-item .ic-address {
+  width: 24rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  margin-top: 4rpx;
+}
+
+.bottom .bottom-item {
+  position: relative;
+  display: flex;
+}
+
+.bottom .bottom-item  view:first-child {
+  width: 160rpx;
+}
+
+.tag {
+  color: white;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  background-color: gray
+}
+
+.bggreen {
+  background-color: #26c785 !important;
+}
+.bgyellow {
+  background-color: #ffc000 !important;
+}
+.bgred {
+  background-color: #F60554 !important;
+}
+
+.box-tel {
+  display: flex;
+  margin-left: 50rpx;
+  position: absolute;
+  right: 0rpx;
+}
+
+.box-tel image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  margin-top: 2rpx;
+}
+
+.red{
+  color: #F60554
+}

@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "nav-bar": "/component/tab_bar/index",
+    "loading": "/component/loading/loading",
+    "empty": "/component/empty/index"
+  }
+}

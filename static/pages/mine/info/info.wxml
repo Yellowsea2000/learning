@@ -1,0 +1,37 @@
+
+<view style='margin-top: 20rpx;'></view>
+<view class="item">
+  <view class='title'>真实姓名</view>
+  <view>{{name}}</view>
+</view>
+<view class="item">
+  <view class='title'>手机号码</view>
+  <view>{{tel}}</view>
+  <!-- <button class="phone-edit-btn" bindtap="showModal" >输入号码</button> -->
+</view>
+<view class="item">
+  <view class='title'>性别</view>
+  <view>{{sex}}</view>
+</view>
+<view class="item">
+  <view class='title'>出生年月</view>
+  <view>{{birthDay}}</view>
+</view>
+<view class="item" wx:if="{{false}}">
+  <view class='title'>简历信息</view>
+</view>
+<view class='box-img' wx:if="{{false}}">
+  <view class='box-img-item' wx:for="{{imgList}}" wx:key="{{item.id}}" data-src='item' bindtap='bindPriweImg'>
+    <view class='img' style='background: url({{item}});background-size: cover;;background-position: center;'></view>
+    <icon type="clear" size="20" color="#666" data-index='index' catchtap='imgDelete' />
+  </view>
+</view>
+<protocol id="protocol"></protocol>
+<view class='box-protocol f12'>
+  <view class='f-blue' bindtap='toProtocol'>《永祺用户服务协议》</view>
+</view>
+
+<!-- <identification-code
+ wx:if="{{isShowModal}}"
+ bind:closeCode="cancel"
+ ></identification-code> -->

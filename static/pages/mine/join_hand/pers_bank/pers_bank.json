@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "扫描银行卡",
+  "usingComponents": {
+    "input_picker": "/component/input_picker/index"
+  }
+}

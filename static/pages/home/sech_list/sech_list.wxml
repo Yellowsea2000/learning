@@ -1,0 +1,55 @@
+<!--pages/home/sech_list/sech_list.wxml-->
+<view>
+  <view class='header'>
+    <view class='serch_input'>
+      <icon size="15" type='search'></icon>
+      <input placeholder='输入关键词搜索' confirm-type="search" bindconfirm='search' bindinput='onChange' value='{{searchValue}}'></input>
+    </view>
+    <view class='header_btn' bindtap='search'>
+      搜索
+    </view>
+  </view>
+  <view class='header_area'>
+    <image class='img1' src='/images/ic_address_gray.png'></image>
+    <view>{{cityName?cityName:"全国"}}</view>
+    <view style="margin-left:50rpx;"> {{storeName?storeName:''}}</view>
+  </view>
+  <view class='history' wx:if="{{listData.length == 0 || !searchValue}}">
+    <view class='his_title'>
+      <view>历史记录</view>
+      <view class='his_delete' bindtap='deletHistory'>
+        <image src='/images/ic_home_delete.png'></image>
+        <text>清除</text>
+      </view>
+    </view>
+    <view class='his_list'>
+      <block wx:for="{{hisListData}}" wx:key="index">
+        <view class='his_item' bindtap='clickHisItem' data-item="{{item}}">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <empty datas="{{listData}}"></empty>
+  <view wx:if="{{searchValue && listData.length}}" class='search_list'>
+    <view class='item-li' hover-class='hover-item' wx:for="{{listData}}" wx:key="{{item.id}}" data-item="{{item}}" bindtap='toDetail'>
+      <view class='top'>
+        <view class='left'>
+          <view class='left-text'>{{item.jobName}}</view>
+          <image src='/images/ic_home_urgent.png' wx:if="{{item.isUrgent == '1'}}"></image>
+        </view>
+        <view class='right'>
+          <view style='font-size: 20rpx;'></view>
+          <view class='price'>{{item.comprehensiveSalary}}</view>
+        </view>
+      </view>
+      <view class='center'>
+        <view class='elips'>{{item.jobWelfare}}</view>
+        <view class='elips'>{{item.companyShortName}}</view>
+      </view>
+      <view class='bottom'>
+        <image class='img' src='/images/ic_address_gray.png'></image>
+        <view>{{item.workAddressList}}</view>
+        <view style="margin-left:50rpx;" wx:if="{{!storeName}}">{{item.storeName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

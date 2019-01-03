@@ -1,0 +1,25 @@
+/* component/msg_success/index.wxss */
+page{
+  height: 100%;
+  background: #fff;
+}
+.wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.success_title{
+  font-size: 60rpx;
+  color: #666;
+}
+.icon_box,.success_desc{
+  margin-top: 200rpx;
+}
+.success_desc{
+  font-size: 32rpx;
+  color: #666;
+}
+.btn{
+  width: 90%;
+}

@@ -1,0 +1,80 @@
+
+<swiper style="height:{{swiperH}}px;" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#aaa" indicator-active-color="#fff">
+  <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='content'>
+  <view class='content-item'>
+    <view class='content-title color3 f16'>{{detailInfo.jobName}}</view>
+    <view class='content-right'>
+      <view class='price'>{{detailInfo.comprehensiveSalary}}</view>
+    </view>
+  </view>
+  <view class='content-item mt'>
+    <view class='content-title'>年龄要求： {{detailInfo.ageNeed}}</view>
+    <view class='content-right'>
+      <view>更新时间 {{detailInfo.updateTimeShow}}</view>
+    </view>
+  </view>
+  <view class='address mt'>
+    {{detailInfo.jobWelfare}}
+  </view>
+</view>
+<view class='content content2'>
+  <view class='content-title color3 f16'>职位详情</view>
+  <view class='item mt'>
+    <view class='left'>综合工资</view>
+    <text>{{detailInfo.comprehensiveSalary}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>工资详情</view>
+    <text>{{detailInfo.salaryDetails}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>作息时间</view>
+    <text> {{detailInfo.workTime}}</text>
+  </view>
+  <view class='item sb'>
+    <view class='left'>上班地点</view>
+    <view class='sb-right'>
+      <view wx:for="{{detailInfo.workAddressList}}" wx:key="{{item.id}}">{{index>0?item.workAddress:item.workAddress}}</view>
+    </view>
+  </view>
+</view>
+<view class='content content2'>
+  <view class='content-title color3 f16'>岗位要求</view>
+  <view class='item mt'>
+    <view class='left'>性别</view>
+    <text> {{detailInfo.sexShow}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>年龄</view>
+    <text>{{detailInfo.ageNeed}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>学历</view>
+    <text>{{detailInfo.educationNeedShow}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>工作年限</view>
+    <text>   {{detailInfo.workYears}}</text>
+  </view>
+  <view class='item'>
+    <view class='left'>岗位职责</view>
+    <text>{{detailInfo.otherDemands}}</text>
+  </view>
+</view>
+<view class='content content2'>
+  <view class='content-title color3 f16'>企业简介</view>
+  <text class='mt'>{{detailInfo.companyInfo.companyIntroduction}}</text>
+</view>
+<view style='height:100rpx'></view>
+<view class='btn-box'>
+  <view class='left' hover-class='left-hover' bindtap='toTel'>联系人事</view>
+  <view class='right' hover-class='right-hover' bindtap='sendLike'>投递简历</view>
+</view>
+
+<view class="back-top" wx:if="{{fromShare}}" bindtap="back2Home">首页</view>

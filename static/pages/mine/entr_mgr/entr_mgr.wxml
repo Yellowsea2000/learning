@@ -1,0 +1,13 @@
+
+<van-tabs active="{{ active }}" bind:change="onChange">
+<van-tab title="未入职">
+    <empty datas="{{listData1}}"></empty>
+    <record-item listData="{{listData1}}" chekeIndex="8"></record-item>
+  </van-tab>
+<van-tab title="已入职">
+    <empty datas="{{listData2}}"></empty>
+    <record-item listData="{{listData2}}" chekeIndex="5"></record-item>
+  </van-tab>
+
+
+</van-tabs>

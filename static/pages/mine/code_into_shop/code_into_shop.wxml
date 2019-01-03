@@ -1,0 +1,54 @@
+
+<view class='line10'></view>
+<!-- loading -->
+<!-- <loading showLoading="{{showLoading}}"></loading> -->
+<van-cell-group>
+  <van-field value="{{ shopInfo.storeName }}" clearable label="门店名称" disabled placeholder="" />
+  <van-field value="{{ shopInfo.belongRegion }}" label="门店地址" disabled placeholder="" border="{{ false }}" />
+</van-cell-group>
+<view class='line10'></view>
+<van-cell-group>
+  <van-field value="{{ username }}" clearable label="真实姓名" bind:input='getName' placeholder="请输入真实姓名" />
+  <view class="item">
+    <view class='title'>性别</view>
+    <view class='box-sex'>
+      <view class='box-sex-item' data-item='1' bindtap='chooseSex'>
+        <image src='{{sex==1?"/images/ic_box_select.png":"/images/ic_box.png"}}'></image>
+        <view>男</view>
+      </view>
+      <view class='box-sex-item' data-item='2' bindtap='chooseSex'>
+        <image src='{{sex==2?"/images/ic_box_select.png":"/images/ic_box.png"}}'></image>
+        <view>女</view>
+      </view>
+    </view>
+  </view>
+  <view class="item">
+    <view class='title'>手机号码</view>
+    <button class='input' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      {{tel?tel:"获取手机号码"}}
+    </button>
+    <van-icon name="arrow" color="#999" size="16px" />
+  </view>
+  <view class="item">
+  <view class="title">出生年月</view>
+  <picker mode="date" end="{{endDate}}" bindchange="bindDateChange">
+    <view class="picker">
+      {{birthDay?birthDay:"请选择"}}
+      <van-icon name="arrow" color="#999" size="16px"/>
+    </view>
+  </picker>
+</view>
+</van-cell-group>
+
+
+<protocol id="protocol"></protocol>
+<view class='box-protocol f12'>
+  <view class='check-box'>
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value="op" checked="{{isChecked}}" />
+    </checkbox-group>
+  </view>
+  <text>同意</text>
+  <view class='f-blue' bindtap='toProtocol'>《简历科技用户服务协议》</view>
+</view>
+<button style="margin-top: 80rpx;" class="btn-bottom-single" hover-class='hover' bindtap="submit">保存</button>

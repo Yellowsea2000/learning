@@ -1,0 +1,51 @@
+<!-- 授权弹出层 -->
+<van-dialog use-slot async-close show="{{ !isAuth }}" showConfirmButton="{{ false }}">
+  <auth-page bind:closeAuth='closeAuth'></auth-page>
+</van-dialog>
+<!-- loading -->
+<!-- <loading showLoading="{{showLoading}}"></loading> -->
+<!-- 头部 -->
+<view class='top-box'>
+  <view class='bg'></view>
+  <view class='top'>
+    <image class='img-head' src="{{obj.userInfo.headImgUrl?obj.userInfo.headImgUrl:'/images/default-head.png'}}"></image>
+    <view class='right'>
+      <view class='f18'>{{obj.userInfo.nickName?obj.userInfo.nickName:"未认证"}}</view>
+      <view class='f15' wx:if="{{obj.userInfo.sex}}">{{obj.userInfo.sex==1?"男":(obj.userInfo.sex==2?"女":"性别：未知")}}</view>
+      <view class='f13'>{{obj.userInfo.roleName}}</view>
+    </view>
+  </view>
+</view>
+<!-- 我的页面 -->
+<van-cell title="个人信息" wx:if="{{obj.userInfo.completed}}" value-class="value-class" is-link url="/pages/mine/info/info" />
+<!-- <van-cell title="入职办理" value-class="value-class" url="/pages/mine/join_hand/pers_bank/pers_bank" is-link /> -->
+<van-cell title="个人信息"   wx:if="{{!obj.userInfo.completed}}" value-class="value-class" value="待完善" is-link url="/pages/mine/info_edit/info_edit" />
+<!-- <van-cell title="入职办理" value-class="value-class" url="/pages/mine/join_hand/join_hand" is-link /> -->
+<van-cell title="入职办理" value-class="value-class" wx:if="{{entryStatus >= 100 && entryStatus < 300}}" value='待办理' url="{{ocrUrl}}" is-link />
+<van-cell title="入职办理" value-class="value-class" wx:if="{{entryStatus == 300}}" value='待审核' is-link />
+<van-cell title="入职办理" value-class="value-class" wx:if="{{entryStatus == 500}}" bind:click='clickCell' value='审核失败' is-link />
+<van-cell title="入职办理" value-class="value-class" wx:if="{{entryStatus == 400}}"  value='已办理' is-link />
+<van-cell title="待面试" value-class="value-class" value="{{waitFaceCount+ ' 人'}}" is-link wx:if="{{obj.userInfo.roleCode=='S01'}}" url="/pages/mine/wait_invw/wait_invw" />
+<van-cell title="门店二维码"  wx:if="{{obj.userInfo.roleCode=='S01'}}" value-class="value-class" url="/pages/mine/shop_code/shop_code" is-link />
+<!-- <van-cell title="门店二维码"  value-class="value-class" url="/pages/mine/shop_code/shop_code" is-link /> -->
+
+<!-- <van-cell title="二维码扫描进来" value-class="value-class"  url="/pages/mine/code_into_shop/code_into_shop" is-link /> -->
+<van-cell title="入职管理" value-class="value-class" wx:if="{{obj.userInfo.roleCode=='F01'}}" value="{{waitIntoCount+ ' 人'}}" url="/pages/mine/join_mage/join_mage" is-link />
+<van-cell title="入职人员管理" value-class="value-class" wx:if="{{obj.userInfo.roleCode=='S01'}}" url="/pages/mine/entr_mgr/entr_mgr" is-link />
+
+<van-cell title="审核管理" value-class="value-class" wx:if="{{obj.userInfo.roleCode=='F01'}}"  value="{{pengingEntryNum + '人'}}" url="/pages/mine/review_mgr/review_mgr" is-link />
+<van-cell title="签订合同" value-class="value-class" wx:if="{{entryStatus == 520}}" value="待签约" url="{{'/pages/mine/sign_cont/sign_cont'}}" is-link />
+<van-cell title="签订合同" value-class="value-class" wx:if="{{entryStatus == 530}}" value="已签约" url="{{'/pages/mine/sign_cont/sign_cont'}}" is-link />
+<!-- <van-cell title="签订合同" value-class="value-class" value="待签约" url="{{'/pages/mine/sign_cont/sign_cont'}}" is-link /> -->
+<view class="section cg" wx:if="{{entryStatus == 400}}">
+  <view class="section__title">我要辞工</view>
+  <picker mode="date" value="{{date}}" disabled='{{date}}' start="2015-09-01" end="{{endDate}}" bindchange="bindDateChange">
+    <view class="picker">
+      {{date?date:" "}}
+      <van-icon name="arrow" color="#999" size="12px" />
+    </view>
+  </picker>
+</view>
+<van-cell title="签约管理" wx:if="{{obj.userInfo.roleCode=='F01'}}"  value-class="value-class" value="{{'未签约 ' + waitingContractNum}}" url="/pages/mine/sign_mgr/sign_mgr" is-link />
+<!-- 导航栏 -->
+<nav-bar active="3"></nav-bar>

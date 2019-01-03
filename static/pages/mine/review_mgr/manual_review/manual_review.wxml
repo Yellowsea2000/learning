@@ -1,0 +1,29 @@
+
+<view class="wrapper">
+    <van-cell title="身份证号" center="{{true}}" value="{{formData.identityCard}}" />
+    <van-cell title="真实姓名" value="{{formData.realName}}" />
+    <van-cell title="性别" value="{{sexMap[formData.sex]}}"  />
+    <van-cell title="手机号" value="{{formData.phone}}"  />
+    <view class="pic-wrapper">
+        <view class="pic-left">
+            <view class="img-box">
+                <image src="{{formData.idCard0Url}}" />
+            </view> 
+            <view style="text-align:center;">证件正面照</view>
+        </view>
+        <view class="pic-right">
+            <view class="img-box">
+                <image src="{{formData.faceUrl}}" />
+            </view>
+            <view style="text-align:center;">人脸识别照</view>
+        </view>
+    </view>
+    <view class="hint">
+        <text class="hint-content">若您已现场确认该工人上传的身份证、人脸识别照与本人一致请点击“通过”，若不一致请点击“不通过</text>
+    </view>
+    <view class="button-wrapper" bindtap="submit">
+        <button data-type="{{'pass'}}">通过</button>
+        <button data-type = "{{'fail'}}">不通过</button>
+    </view>
+</view>
+

@@ -1,0 +1,26 @@
+
+.m-header {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.m-header .m-header-content {
+  position: relative;
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+
+.m-header .img-back {
+  width: 36rpx;
+  height: 36rpx;
+}
+.m-header .title{
+  text-align: center;
+  width: 100%;
+}

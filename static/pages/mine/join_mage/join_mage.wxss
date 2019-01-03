@@ -1,0 +1,32 @@
+.modal{
+    width:640rpx;
+    height:480rpx;
+    background:white;
+    box-sizing: border-box;
+    padding: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.modal .close{
+    position: absolute;
+    top:10rpx;
+    right:10rpx;
+}
+
+ .van-dialog__button{
+     width:100%!important;
+     background:white;
+ }
+
+ .van-button--large{
+    width:80%!important;
+    /* background:red!important; */
+    color:white!important;
+}
+
+.modal-input{
+
+    background:rgb(241, 239, 239);
+}

@@ -1,0 +1,24 @@
+<!--pages/mine/join_hand/pers_face/pers_face.wxml-->
+
+<view class="wrap">
+  <view class='face-box'>
+    <camera device-position="front" flash="off" binderror="error" wx:if="{{!isFaceUrl&&isCamera}}"></camera>
+    <!-- <image class='face-img' src='/images/ic_mine_face_bg.png'></image> -->
+    <image class='face-img' wx:if="{{faceUrl}}" mode='aspectFit' src='{{faceUrl}}'></image>
+  </view>
+  <view class="btn-camera-box">
+    <button class='btn-camera' bindtap="takePhoto" wx:if="{{!isFaceUrl&&isCamera}}">拍照</button>
+    <button class='btn-camera' bindtap="reTakePhoto" wx:if="{{faceUrl}}">重拍</button>
+  </view>
+  <view class='prompt' wx:if="{{!faceUrl}}">
+    请对准摄像头
+  </view>
+  <!-- <view class='prompt' wx:if="{{!faceUrl}}">
+    {{isFaceUpload}}
+  </view> -->
+  <view class='btn-box'>
+    <button class='bottom-btn' bindtap='next'>下一步</button>
+  </view>
+
+</view>
+<view class='loading' wx:if="{{isLoading&&test}}"></view>

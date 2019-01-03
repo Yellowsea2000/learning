@@ -1,0 +1,74 @@
+.line10{
+  height: 10rpx;
+}
+/* 用户协议 */
+
+.box-protocol {
+  display: flex;
+  padding: 36rpx 36rpx;
+  font-size: 28rpx;
+  justify-content: center
+}
+.box-protocol .f-blue{
+  color: #F60554
+}
+.box-protocol .check-box {
+  margin-top: -6rpx;
+}
+
+.box-protocol .check-box checkbox {
+  zoom: 70%;
+}
+
+.item {
+  display: flex;
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  padding: 0 30rpx;
+  background-color: white;
+  border-bottom: 2rpx solid #efeff4
+}
+
+.box-sex {
+  display: flex;
+}
+
+.box-sex .box-sex-item {
+  display: flex;
+  margin-right: 50rpx;
+}
+
+.box-sex image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}
+.title{
+  min-width:90px;
+    font-size: 30rpx;
+}
+.input{
+  background-color: #fff;
+  color: #888;
+  font-size: 30rpx;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  line-height: 100rpx;
+}
+button::after{border: 0}
+picker{
+    color: #888;
+  font-size: 30rpx;
+  width: 100%;
+  text-align: left;
+}
+.picker van-icon{
+  position: absolute;
+  right: 0;
+  top: 4rpx;
+}

@@ -1,0 +1,31 @@
+/* pages/mine/join_hand/pers_info/pers_info.wxss */
+page{
+  background-color: #fff;
+  height: 100%;
+  
+}
+
+.wrap{
+  width: 100%;       
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  overflow-x: hidden;
+}
+.form-box{
+  width: 100%;
+}
+.btn-box{
+  width: 88%;
+  margin-top:20rpx; 
+  margin-bottom: 40rpx;
+}
+.bottom-btn {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  background: rgba(246, 5, 84, 1);
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,213 @@
+/* pages/atce/atce.wxss */
+/* .header{
+    display:flex;
+    justify-content: center;
+    background: white;
+}
+.header image{
+    width:1rem;
+    height:1rem;
+}
+
+.header .header-inner text{
+    font-size:0.7rem;
+    color:#C7C3C3;
+    line-height: 50rpx;
+} */
+
+
+page{
+	background: white!important;
+}
+
+.total-worktime{
+	height:100rpx;
+}
+.wrap .total-worktime .title{
+    height:46rpx;
+	font-size:26rpx;
+	text-align: center;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:#282828;
+}
+
+.wrap .total-worktime .number{
+    height:88rpx;
+	font-size:60rpx;
+	text-align: center;
+    font-family:DINAlternate-Bold;
+    font-weight:900;
+    color:#3C90E6
+}
+
+.wrap .footer{
+	height:120rpx;
+	margin-top:40rpx;
+	display: flex;
+	justify-content: space-around;
+}
+
+.wrap .footer .item{
+	width:200rpx;
+	text-align: center;
+}
+
+.wrap .footer .item .title{
+	font-family:PingFangSC-Regular;
+    font-weight:400;
+	color:rgba(102,102,102,1);
+	font-size:26rpx;
+}
+
+.wrap .footer .item:nth-of-type(1){
+	height:88rpx;
+	font-size:50rpx;
+	text-align: center;
+    font-family:DINAlternate-Bold;
+    font-weight:900;
+    color:#3C90E6
+}
+.wrap .footer .item:nth-of-type(2){
+	height:88rpx;
+	font-size:50rpx;
+	text-align: center;
+    font-family:DINAlternate-Bold;
+    font-weight:900;
+	color:#F73F77;
+}
+
+.wrap .footer .item:nth-of-type(3){
+	height:88rpx;
+	font-size:50rpx;
+	text-align: center;
+    font-family:DINAlternate-Bold;
+    font-weight:900;
+	color:#F73F77;
+}
+
+
+
+.date-show{
+	width: 250rpx;
+	font-family: PingFang-SC-Regular;
+	font-size: 40rpx;
+	color: #282828;
+	text-align: center;
+	margin: 30rpx auto 10rpx;
+	display:flex;
+}
+.date-show .month{
+	width:220rpx;
+	color:#282828;
+}
+.lt-arrow,.rt-arrow{ 
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+    width: 60rpx;
+   height: 60rpx;
+	/* line-height: 60rpx; */
+  vertical-align: middle;
+  margin:0 30rpx;
+  }
+.lt-arrow image,.rt-arrow image{
+	width: 30rpx;
+	height: 30rpx;
+}
+
+
+.header{
+	font-size: 0;
+	padding: 0 24rpx;
+}
+.header>view{
+	display: inline-block;
+	width: 14.285%;
+	color: #333;
+	font-size: 30rpx;
+	text-align: center;
+	border-bottom: 1px solid #D0D0D0;
+	padding: 39rpx 0;
+}
+.weekMark{
+	position: relative;
+}
+.weekMark view{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #22A7F6;
+}
+.date-box{
+	font-size: 0;
+	padding: 10rpx 0;
+}
+.date-box>view{
+	position: relative;
+	display: inline-block;
+	width: 14.285%;
+	color: #020202;
+	font-size: 40rpx;
+	text-align: center;
+	vertical-align: middle;
+	margin: 15rpx 0;
+}
+.date-head{
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 26rpx;
+}
+.nowDay .date-head{
+	width: 60rpx;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+	background-color: #F60554;
+	margin: 0 auto;
+}
+.date-weight{
+	font-size: 22rpx;
+	height:56rpx;
+}
+.nowDay .date-weight{
+	color: #22A7F6;
+}
+
+ .date-weight .top, .date-weight .bottom{
+	overflow: hidden;
+	margin-left:30rpx;
+	
+}
+.date-weight .top view, .date-weight .bottom view{
+  text-align: center;
+	font-size:26rpx;
+	float:left;
+}
+
+/* 加班icon */
+.overtime-hint{
+	width:20rpx;
+	height:20rpx;
+	border-radius:10rpx;
+	margin-right:10rpx;
+}
+.one{
+	position: absolute;
+	bottom: 0;
+	right: 5rpx;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: red;
+}
+.two{
+	position: absolute;
+	bottom: 30rpx;
+	right: 5rpx;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: blue;
+}

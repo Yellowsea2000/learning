@@ -1,0 +1,5 @@
+<!--components/loading/loading.wxml-->
+<!-- <view class='bg' wx:if="{{showLoading}}"> -->
+ <view class='bg {{showLoading?"":"m-display"}}'> 
+<image class='m-loading' src='/images/app-loading.gif'></image>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/mine/join_hand/pers_bank/pers_bank.wxml-->
+
+<view class='wrap bank'>
+  <view class='camera-box'>
+    <view class='camera-item' bindtap="cameraMethods">
+      <view wx:if="{{!persInfo.bankUrl}}" class='camera-upload'>
+        <view class='camera-upload-text'>
+          <image class='camera' mode='widthFix' src='/images/ic_mine_camera.png'></image>
+          <text style='margin-left:10rpx;'>上传银行卡照片</text>
+        </view>
+        <image class='camera-bg' mode='widthFix' src='/images/ic_mine_camera_bg_red.png'></image>
+      </view>
+      <view wx:if="{{persInfo.bankUrl}}" class='camera-img'>
+        <image src="{{persInfo.bankUrl}}" mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+  <view class='form-box'>
+    <block wx:for='{{inputSetting}}' wx:key='index'>
+      <input_picker bind:onChange="{{item.selfType == 'input'? 'onChange':''}}" bind:bindPickerChange="{{item.selfType == 'picker' ? 'bindPickerChange' :''}}" objSet="{{item}}" data-name='{{item.name}}' value="{{persInfo[item.name]}}"></input_picker>
+    </block>
+  </view>
+  
+  <view class='btn-box'>
+    <button class='bottom-btn' bindtap='next'>下一步</button>
+  </view>
+</view>
+<view class='loading' wx:if="{{isLoading}}"></view>

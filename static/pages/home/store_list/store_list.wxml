@@ -1,0 +1,15 @@
+<view class="area-filter" >
+    <view class="top">按门店</view>
+    <view class="center">
+      <button 
+          wx:for="{{areaList}}" 
+          wx:key="{{item.value}}" 
+          data-index="{{index}}"
+          data-item = "{{item}}"
+          bindtap="selectedArea"
+          class="{{index === selectedAreaIndex ? 'active':''}}"
+          >
+          {{item.storeName}}
+          </button>
+    </view>
+</view>

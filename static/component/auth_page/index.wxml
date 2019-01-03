@@ -1,0 +1,8 @@
+<view class='page'>
+  <view>尊敬的用户，为了您更好的访问更多的内容请点击微信授权</view>
+  <view class='title'>第一步</view>
+  <image class='img1' src='/images/auth_btn_yd.png'></image>
+  <view class='title'>第二步</view>
+  <image class='img2' src='/images/auth_box.png'></image>
+  <button class='btn'  open-type="getUserInfo" bindgetuserinfo="getUserInfo" >微信授权</button>
+</view>

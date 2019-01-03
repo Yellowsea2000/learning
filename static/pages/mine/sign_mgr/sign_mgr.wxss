@@ -1,0 +1,17 @@
+.sign-btn{
+    background: white;
+    /* padding:40rpx; */
+    /* margin-top:20rpx; */
+    position: fixed;
+    bottom:0;
+    width:100vw;
+    overflow:hidden;
+    justify-content: center;
+
+}
+
+.sign-btn button{
+    color:white;
+    background:red;
+    
+}

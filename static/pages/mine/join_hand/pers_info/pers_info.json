@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "信息维护",
+  "usingComponents": {
+    "input_picker": "/component/input_picker/index"
+  }
+}

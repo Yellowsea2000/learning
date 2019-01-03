@@ -1,0 +1,96 @@
+.item {
+  position: relative;
+  padding: 0 42rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  margin-top: 14rpx;
+  color: #666;
+}
+
+.item .top {
+  display: flex;
+  padding: 34rpx 0;
+}
+
+.item .top .img {
+  width: 120rpx;
+  height: 120rpx;
+  min-width: 120rpx;
+  border-radius: 120rpx;
+}
+
+.item .top .top-left {
+  display: flex;
+  width: 70%;
+  max-width: 70%;
+}
+
+.item .top .name {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 4rpx;
+  font-weight: 700;
+}
+
+.item .top .top-left .center {
+  margin-left: 40rpx;
+}
+
+.item .top-right {
+  position: relative;
+  width: 30%;
+  max-width: 30%;
+  text-align: right;
+}
+
+.item .top-right .tel-box {
+  display: flex;
+  justify-content: flex-end;
+  color: #F60554;
+}
+
+.item .top-right .tel-box image {
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 4rpx;
+  margin-right: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.btn-box {
+  display: flex;
+  padding: 34rpx 0;
+  border-top: 2rpx solid #efeff4;
+}
+
+.btn-box button {
+  width: 200rpx;
+  height: 60rpx;
+  border: 2rpx solid #F60554;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  color: #F60554;
+  background-color: #fff;
+  margin: 0;
+  margin-right: 30rpx
+}
+
+button::after {
+  border: 0;
+}
+.btn-hover{
+  color: #fff;
+  background-color: #ddd
+}
+.tag{
+  color: white;
+  font-size: 28rpx;
+  padding: 3rpx 30rpx;
+  margin-left: 30rpx;
+  border-radius: 8rpx;
+  background-color: #FF7E00;
+}
+.red{
+  background-color: #F60554;
+}

@@ -1,0 +1,37 @@
+.page {
+  height: 70vh;
+  color: #333;
+  text-align: left;
+  padding: 40rpx;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.img1 {
+  width: 50vw;
+  height: 13vw;
+  margin-left: 10vw;
+}
+
+.img2 {
+  width: 50vw;
+  height: 40vw;
+  margin-left: 10vw;
+  margin-top: 20rpx;
+}
+
+.btn {
+  position: absolute;
+  bottom: 100rpx;
+  left: 15%;
+  width: 70%;
+  height: 10vw;
+  font-size: 28rpx;
+  color: white;
+  background: linear-gradient(to right, #f6664e 0%, #f33c4d 100%);
+}

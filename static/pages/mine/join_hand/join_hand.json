@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "身份证扫描",
+  "usingComponents": {
+    "input_picker": "/component/input_picker/index"
+  }
+}

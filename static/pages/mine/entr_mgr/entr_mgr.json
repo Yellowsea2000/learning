@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "入职人员管理",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "record-item": "/component/record_item/index",
+    "empty": "/component/empty/index"
+  }
+}
