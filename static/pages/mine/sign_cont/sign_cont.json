@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "合同签署",
-  "usingComponents": {
-    "loading": "/component/loading/loading"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "投递记录",
-    "enablePullDownRefresh": true,
-    "onReachBottomDistance": 50,
-  "usingComponents": {
-    "nav-bar": "/component/tab_bar/index",
-    "empty": "/component/empty/index"
-  }
-}

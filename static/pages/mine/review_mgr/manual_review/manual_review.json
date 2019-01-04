@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "人工信息审核",
-    "usingComponents":{
-        "van-cell": "/miniprogram_npm/vant-weapp/cell/index"
-    }
-}

@@ -1,4 +1,0 @@
-
-<view class='modal'>
-    <image src="{{url}}" />
-</view>

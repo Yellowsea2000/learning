@@ -1,4 +1,0 @@
-<view class='page-temp' wx-if="{{datas&&datas.length==0}}">
-  <image mode='aspectFit' src="/images/empty.png"></image>
-  <view class='tip-text'>空空如也</view> 
-</view>

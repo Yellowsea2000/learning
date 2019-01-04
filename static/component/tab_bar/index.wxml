@@ -1,9 +1,0 @@
-<!-- 首页tabbar控制 -->
-<view style='height:120rpx;'></view>
-<van-tabbar active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item wx:for="{{tabList}}" wx:key="{{item.text}}">
-    <span>{{item.text}}</span>
-    <image slot="icon" src="{{ item.img}}" class="icon" mode="aspectFit" />
-    <image slot="icon-active" src="{{ item.img2 }}" mode="aspectFit" />
-  </van-tabbar-item>
-</van-tabbar>

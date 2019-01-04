@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "考勤",
-  "usingComponents": {
-    "nav-bar": "/component/tab_bar/index"
-  }
-}

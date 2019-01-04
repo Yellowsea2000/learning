@@ -1,9 +1,0 @@
-<view class='m-header' style="background-color:{{navigatetionStyle.backgroundColor}};color:{{navigatetionStyle.color}};">
-  <view class='m-header-content' style='margin-top: {{statusBarHeight}}px; '>
-    <view class='btn-back' bindtap="{{back?'_navback':'hrefUrl'}}" wx:if="{{backImg}}">
-      <image class='img-back' src='../../images/ic_back.png' mode='aspectFill'></image>
-    </view>
-    <view class='title'>{{title}}</view>
-  </view>
-</view>
-<view style='height: {{statusBarHeight + 50}}px;'></view>

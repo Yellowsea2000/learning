@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "个人信息",
-  "usingComponents": {
-    "protocol": "/component/protocol/protocol",
-    "identification-code": "/component/identification_code/identification_code"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "申请记录",
-  "usingComponents": {
-    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
-    "record-item": "/component/record_item/index"
-  }
-}

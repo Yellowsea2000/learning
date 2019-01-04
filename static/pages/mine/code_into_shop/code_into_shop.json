@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "完善信息",
-  "usingComponents": {
-    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
-    "van-field": "/miniprogram_npm/vant-weapp/field/index",
-    "protocol": "/component/protocol/protocol",
-    "loading": "/component/loading/loading"
-  }
-}
